@@ -6,7 +6,10 @@ let package = Package(
     platforms: [
         .iOS(.v10),
     ],
-    products: [.library(name: "SQLite", targets: ["SQLite", "SQLiteObjc"])],
+    products: [
+        .library(name: "SQLite", targets: ["SQLite"]),
+        .library(name: "SQLiteObjc", targets: ["SQLiteObjc"]),
+    ],
     targets: [
         .target(name: "SQLite", dependencies: ["SQLiteObjc"]),
         .target(name: "SQLiteObjc"),
